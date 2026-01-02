@@ -5,7 +5,7 @@ A lightweight personal productivity workspace built with **vanilla JavaScript**.
 This project combines ideas from note-taking, task management, and knowledge base tools
 into a single, minimal, offline-first web application, without frameworks or build tools. 
 
-## Features
+## ✨ Features
 
 - Unified workspace for notes and tasks
 - Hierarchical structure (pages / items)
@@ -14,7 +14,7 @@ into a single, minimal, offline-first web application, without frameworks or bui
 - Accessible, semantic HTML
 - Clean, modular architecture
 
-## Project Goals
+## 🎯 Project Goals
 
 The main goals of this project are:
 
@@ -25,7 +25,7 @@ The main goals of this project are:
 
 This is a long-term project developed incrementally with a focus on clarity and quality.
 
-## Tech Stack 
+## ⚙️ Tech Stack 
 
 - **HTML5** — semantic & accessible markup 
 - **CSS3** — UI/UX design 
@@ -34,7 +34,7 @@ This is a long-term project developed incrementally with a focus on clarity and 
 
 No frameworks. No bundlers. No external dependencies. 
 
-## Development Approach 
+## ✏️ Development Approach 
 
 - small, single-feature focused commits
 - feature branches merged into main
@@ -43,10 +43,10 @@ No frameworks. No bundlers. No external dependencies.
 
 Commit history is treated as part of the project documentation.
 
-## Status
+## 🛠️ Status
 
 This project is under active development.
 
-## License 
+## 📄 License 
 
 MIT
