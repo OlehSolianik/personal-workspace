@@ -9,14 +9,24 @@
     <title>Personal Workspace</title>
   </head>
   <body>
-    <header class="app__header"></header>
+    <header class="app__header">
+      <div class="header__controls"></div>
+      <div class="header__tabs"></div>
+    </header>
 
     <div class="app__layout">
 
-      <aside class="app__sidebar"></aside>
+      <aside class="app__sidebar">
+        <div class="sidebar__actions"></div>
+        <nav class="sidebar__nav"></nav>
+        <footer class="sidebar__controls"></footer>
+      </aside>
 
-      <main class="app__editor"></main>
-      
+      <main class="app__editor">
+        <div class="editor__header"></div>
+        <div class="editor__content"></div>
+      </main>
+
     </div>
 
     <script src="./js/app.js" type="module" defer></script>
