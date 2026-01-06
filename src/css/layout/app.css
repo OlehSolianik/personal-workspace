@@ -1,0 +1,23 @@
+/* ==================================================
+Application static layout
+================================================== */
+
+.app__header {
+  border: 1px solid black;
+  height: 4vh;
+}
+
+.app__layout {
+  display: flex;
+  flex-direction: row;
+  height: 96vh;
+}
+
+.app__sidebar {
+  border-right: 1px solid black;
+  width: 20vw;
+}
+
+.app__editor {
+  width: 80vw;
+}
