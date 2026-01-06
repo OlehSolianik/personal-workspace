@@ -1,0 +1,23 @@
+/* ==================================================
+Application sidebar panel
+================================================== */
+
+.app__sidebar {
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__actions {
+  border-bottom: 1px solid black;
+  height: 3.5%;
+}
+
+.sidebar__nav {
+  border-bottom: 1px solid black;
+  height: 91.5%;
+}
+
+.sidebar__controls {
+  height: 5%;
+}

@@ -3,19 +3,9 @@ Application static layout
 ================================================== */
 
 .app__header {
-  border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   height: 4vh;
-}
-
-.header__controls {
-  border-right: 1px solid black;
-  width: 20%;
-}
-
-.header__tabs {
-  width: 80%;
 }
 
 .app__layout {
@@ -25,33 +15,9 @@ Application static layout
 }
 
 .app__sidebar {
-  border-right: 1px solid black;
   width: 20vw;
-}
-
-.sidebar__actions {
-  border-bottom: 1px solid black;
-  height: 3.5%;
-}
-
-.sidebar__nav {
-  border-bottom: 1px solid black;
-  height: 91.5%;
-}
-
-.sidebar__controls {
-  height: 5%;
 }
 
 .app__editor {
   width: 80vw;
-}
-
-.editor__header {
-  border-bottom: 1px solid black;
-  height: 3.5%;
-}
-
-.editor__content {
-  height: 96.5%;
 }

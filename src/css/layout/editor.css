@@ -1,0 +1,17 @@
+/* ==================================================
+Application editing area
+================================================== */
+
+.app__editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor__header {
+  border-bottom: 1px solid black;
+  height: 3.5%;
+}
+
+.editor__content {
+  height: 96.5%;
+}
