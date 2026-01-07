@@ -10,7 +10,10 @@ Application sidebar panel
 
 .sidebar__actions {
   border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
   height: 3.5%;
+  justify-content: center;
 }
 
 .sidebar__nav {
