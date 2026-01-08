@@ -29,14 +29,27 @@ function bindSwitchPages() {
   const navPageList = document.querySelector('.nav__page-list');
 
   navPageList.addEventListener('click', (e) => {
-    const item = e.target.closest('[data-page-id]');
-    if (!item) return; 
+    const addSubpageButton = e.target.closest('[data-action="add-subpage"]');
+    const pageItem = e.target.closest('[data-page-id]');
+    if (!pageItem) return; 
 
-    const pageId = item.dataset.pageId; 
+    if (addSubpageButton) {
+      const parentId = addSubpageButton.dataset.parentId;
 
-    setActivePage(pageId); 
-    saveStateToStorage();
-    renderApp();
+      createPage({ parentId });
+      saveStateToStorage();
+      renderApp();
+      return;
+    }
+
+    // Activate page
+    if (pageItem) {
+      const pageId = pageItem.dataset.pageId;
+
+      setActivePage(pageId);
+      saveStateToStorage();
+      renderApp();
+    }
   })
 }
 
