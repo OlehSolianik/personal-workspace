@@ -15,13 +15,13 @@ function renderApp() {
 
 function renderSidebar() {
   const { pages, activePageId } = getState();
-  const sidebarNav = document.querySelector('.sidebar__nav');
+  const navPageList = document.querySelector('.nav__page-list');
 
-  sidebarNav.innerHTML = pages.map(page => 
+  navPageList.innerHTML = pages.map(page => 
     `
-    <div class="nav__page ${page.id === activePageId ? 'nav__page--active' : ''}" data-id="${page.id}">
+    <li class="page-list__item ${page.id === activePageId ? 'page-list__item--active' : ''}" data-page-id="${page.id}">
       ${page.title}
-    </div>
+    </li>
     `
   ).join('');
 }

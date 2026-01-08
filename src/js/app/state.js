@@ -36,4 +36,8 @@ function createPage() {
   state.activePageId = newPage.id;
 }
 
-export { loadState, getState, createPage };
+function setActivePage(pageId) {
+  state.activePageId = pageId;
+}
+
+export { loadState, getState, createPage, setActivePage };
