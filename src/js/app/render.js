@@ -2,7 +2,7 @@
 // Imports
 // =========================
 
-import { getState } from "./state.js";
+import { getState, getChildPages } from "./state.js";
 
 // =========================
 // Application logic
@@ -14,14 +14,30 @@ function renderApp() {
 }
 
 function renderSidebar() {
-  const { pages, activePageId } = getState();
   const navPageList = document.querySelector('.nav__page-list');
+  navPageList.innerHTML = renderPageTree(); 
+}
 
-  navPageList.innerHTML = pages.map(page => 
+function renderPageTree(parentId = null, level = 0) {
+  const pages = getChildPages(parentId);
+
+  return pages.map(page => 
     `
-    <li class="page-list__item ${page.id === activePageId ? 'page-list__item--active' : ''}" data-page-id="${page.id}">
-      ${page.title}
+    <li 
+      class="page-list__item ${page.id === getState().activePageId ? 'page-list__item--active' : ''}" 
+      data-page-id="${page.id}"
+      style="padding-left: ${level * 16}px"
+    >
+      <span class="page-list__title">${page.title}</span>
+      <button
+        class="page-list__add-page"
+        data-action="add-subpage"
+        data-parent-id="${page.id}"
+      >
+        +
+      </button>
     </li>
+    ${renderPageTree(page.id, level + 1)}
     `
   ).join('');
 }
