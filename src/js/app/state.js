@@ -25,9 +25,10 @@ function getState() {
   return state;
 }
 
-function createPage() {
+function createPage({ parentId = null } = {}) {
   const newPage = {
     id: crypto.randomUUID(),
+    parentId,
     title: 'Untitled', 
     content: ''
   }
@@ -40,4 +41,8 @@ function setActivePage(pageId) {
   state.activePageId = pageId;
 }
 
-export { loadState, getState, createPage, setActivePage };
+function getChildPages(parentId = null) {
+  return state.pages.filter(page => page.parentId === parentId);
+}
+
+export { loadState, getState, createPage, setActivePage, getChildPages };
