@@ -9,7 +9,7 @@ import { loadStateFromStorage } from '../services/storage.js';
 // =========================
 
 const state = {
-  pages: [],
+  pages: [], 
   activePageId: null,
 }
 
@@ -29,12 +29,12 @@ function createPage({ parentId = null } = {}) {
   const newPage = {
     id: crypto.randomUUID(),
     parentId,
-    title: 'Untitled', 
+    title: crypto.randomUUID(), 
     content: ''
   }
 
   state.pages.push(newPage);
-  state.activePageId = newPage.id;
+  setActivePage(newPage.id);
 }
 
 function setActivePage(pageId) {
