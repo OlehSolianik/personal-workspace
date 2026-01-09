@@ -16,7 +16,7 @@ Application sidebar panel
   justify-content: center;
 }
 
-.sidebar__nav {
+.sidebar__navigation {
   border-bottom: 1px solid black;
   height: 91.5%;
 }

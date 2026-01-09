@@ -2,7 +2,7 @@
 // Imports
 // =========================
 
-import { loadState } from './state.js';
+import { initState } from './state.js';
 import { renderApp } from './render.js';
 import { bindEvents } from './events.js';
 
@@ -12,8 +12,7 @@ import { bindEvents } from './events.js';
 
 export function initApp() {
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('App initialized');
-    loadState();
+    initState();
     renderApp();
     bindEvents();
   });

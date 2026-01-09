@@ -15,8 +15,8 @@ function saveStateToStorage() {
 }
 
 function loadStateFromStorage() {
-  const raw = localStorage.getItem(STORAGE_KEY);
-  return raw ? JSON.parse(raw) : null;
+  const rawState = localStorage.getItem(STORAGE_KEY);
+  return rawState ? JSON.parse(rawState) : null;
 }
 
 export { saveStateToStorage, loadStateFromStorage };

@@ -1,4 +1,4 @@
-.page-list__item {
+.page-tree__item {
   cursor: pointer;
   display: flex;
   flex-direction: row;

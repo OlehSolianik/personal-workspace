@@ -8,17 +8,17 @@ import { loadStateFromStorage } from '../services/storage.js';
 // Application logic
 // =========================
 
-function loadState() {
-  const saved = loadStateFromStorage();
-  if (!saved) return;
-
-  state.pages = saved.pages || [];
-  state.activePageId = saved.activePageId || null;
-}
-
 const state = {
   pages: [],
   activePageId: null,
+}
+
+function initState() {
+  const savedState = loadStateFromStorage();
+  if (!savedState) return;
+
+  state.pages = savedState.pages || [];
+  state.activePageId = savedState.activePageId || null;
 }
 
 function getState() {
@@ -45,4 +45,4 @@ function getChildPages(parentId = null) {
   return state.pages.filter(page => page.parentId === parentId);
 }
 
-export { loadState, getState, createPage, setActivePage, getChildPages };
+export { initState, getState, createPage, setActivePage, getChildPages };
