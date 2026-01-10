@@ -3,6 +3,7 @@
 // =========================
 
 import { bindSidebarEvents } from "../components/sidebar/sidebarEvents.js";
+import { bindEditorEvents } from "../components/editor/editorEvents.js";
 
 // =========================
 // Application logic
@@ -10,6 +11,7 @@ import { bindSidebarEvents } from "../components/sidebar/sidebarEvents.js";
 
 function bindEvents() {
   bindSidebarEvents();
+  bindEditorEvents();
 }
 
 export { bindEvents };
