@@ -45,4 +45,19 @@ function getChildPages(parentId = null) {
   return state.pages.filter(page => page.parentId === parentId);
 }
 
-export { initState, getState, createPage, setActivePage, getChildPages };
+function getPagePath(pageId) {
+  const { pages } = getState();
+  const path = [];
+  let currentPage = pages.find(page => page.id === pageId);
+
+  while (currentPage) {
+    path.unshift(currentPage); 
+    currentPage = currentPage.parentId
+      ? pages.find(page => page.id === currentPage.parentId)
+      : null;
+  }
+
+  return path;  
+}
+
+export { initState, getState, createPage, setActivePage, getChildPages, getPagePath };
