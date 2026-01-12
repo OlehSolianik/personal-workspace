@@ -2,6 +2,7 @@
 // Imports
 // =========================
 
+import { renderHeader } from "../components/header/renderHeader.js";
 import { renderSidebar } from "../components/sidebar/renderSidebar.js";
 import { renderEditor } from "../components/editor/renderEditor.js";
 
@@ -10,6 +11,7 @@ import { renderEditor } from "../components/editor/renderEditor.js";
 // =========================
 
 function renderApp() {
+  renderHeader();
   renderSidebar();
   renderEditor();
 }
