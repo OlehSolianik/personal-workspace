@@ -2,6 +2,7 @@
 // Imports
 // =========================
 
+import { bindHeaderEvents } from "../components/header/headerEvents.js";
 import { bindSidebarEvents } from "../components/sidebar/sidebarEvents.js";
 import { bindEditorEvents } from "../components/editor/editorEvents.js";
 
@@ -10,6 +11,7 @@ import { bindEditorEvents } from "../components/editor/editorEvents.js";
 // =========================
 
 function bindEvents() {
+  bindHeaderEvents();
   bindSidebarEvents();
   bindEditorEvents();
 }
