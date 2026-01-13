@@ -15,9 +15,9 @@ Application static layout
 }
 
 .app__sidebar {
-  width: 20vw;
+  flex: 0 0 20vw;
 }
 
 .app__editor {
-  width: 80vw;
+  flex: 1 0 80vw;
 }

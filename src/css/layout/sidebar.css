@@ -8,10 +8,6 @@ Application sidebar panel
   flex-direction: column;
 }
 
-.app__sidebar--collapsed {
-  display: none;
-}
-
 .sidebar__actions {
   border-bottom: 1px solid black;
   display: flex;

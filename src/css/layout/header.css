@@ -10,11 +10,11 @@ Application header area
   align-content: center;
   border-right: 1px solid black;
   display: flex;
+  flex: 0 0 20%;
   flex-direction: row;
   padding-left: 16px;
-  width: 20%;
 }
 
 .header__tabs {
-  width: 80%;
+  flex: 1 0 80%;
 }

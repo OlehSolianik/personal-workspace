@@ -1,21 +1,9 @@
-// =========================
-// Imports
-// =========================
-
-import { getState } from "../../app/state.js";
-
-// =========================
-// Application logic
-// =========================
-
 function renderHeader() {
   renderHeaderControls();
 }
 
 function renderHeaderControls() {
-  const appSidebar = document.querySelector('.app__sidebar'); 
-
-  appSidebar.classList.toggle('app__sidebar--collapsed', getState().sidebarIsCollapsed);
+  console.log('This functionality has been changed as a result of improvements to the project architecture and will be further developed in the future');
 }
 
 export { renderHeader, renderHeaderControls };
