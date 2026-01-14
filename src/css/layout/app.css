@@ -2,6 +2,10 @@
 Application static layout
 ================================================== */
 
+:root {
+  --sidebar-width: 20vw;
+}
+
 .app__header {
   display: flex;
   flex-direction: row;
@@ -15,7 +19,7 @@ Application static layout
 }
 
 .app__sidebar {
-  flex: 0 0 20vw;
+  flex: 0 0 var(--sidebar-width);
 }
 
 .app__editor {

@@ -2,6 +2,9 @@
 Application header area
 ================================================== */
 
+:root {
+  --header-width: 20vw; 
+}
 .app__header {
   border-bottom: 1px solid black;
 }
@@ -10,11 +13,11 @@ Application header area
   align-content: center;
   border-right: 1px solid black;
   display: flex;
-  flex: 0 0 20%;
+  flex: 0 0 var(--header-width);
   flex-direction: row;
   padding-left: 16px;
 }
 
 .header__tabs {
-  flex: 1 0 80%;
+  flex: 1 0 80vw;
 }

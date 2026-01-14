@@ -2,7 +2,7 @@
 // Imports
 // =========================
 
-import { toggleLeftPanel } from "../../app/state.js";
+import { toggleLeftPane } from "../../app/state.js";
 import { renderApp } from "../../app/render.js";
 import { saveStateToStorage } from "../../services/storage.js";
 
@@ -15,10 +15,10 @@ function bindGlobalEvents() {
 }
 
 function bindSidebarToggle() {
-  const sidebarToggleBtn = document.querySelector('.sidebar__toggle'); 
+  const toggleLeftPaneBtn = document.querySelector('[data-action="toggle-left-pane"]'); 
   
-  sidebarToggleBtn.addEventListener('click', () => {
-    toggleLeftPanel();
+  toggleLeftPaneBtn.addEventListener('click', () => {
+    toggleLeftPane();
     renderApp();
     saveStateToStorage();
   });

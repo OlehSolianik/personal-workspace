@@ -10,7 +10,8 @@
 
 @import "./components/list.css";
 @import "./components/breadcrumbs.css";
-@import "./components/sidebar-toggle.css";
+@import "./components/left-pane-toggle.css";
+@import "./components/layout-splitter.css";
 
 /* ========================= */ 
 /* Layout */

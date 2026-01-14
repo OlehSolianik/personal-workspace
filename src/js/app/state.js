@@ -11,7 +11,7 @@ import { loadStateFromStorage } from '../services/storage.js';
 const state = {
   pages: [], 
   activePageId: null,
-  leftPanelIsCollapsed: false,
+  leftPaneIsCollapsed: false,
 }
 
 function initState() {
@@ -20,7 +20,7 @@ function initState() {
 
   state.pages = savedState.pages || [];
   state.activePageId = savedState.activePageId || null;
-  state.leftPanelIsCollapsed = savedState.leftPanelIsCollapsed || false;
+  state.leftPaneIsCollapsed = savedState.leftPaneIsCollapsed || false;
 }
 
 function getState() {
@@ -62,8 +62,8 @@ function getPagePath(pageId) {
   return path;  
 }
 
-function toggleLeftPanel() {
-  getState().leftPanelIsCollapsed = !getState().leftPanelIsCollapsed;
+function toggleLeftPane() {
+  getState().leftPaneIsCollapsed = !getState().leftPaneIsCollapsed;
 }
 
-export { initState, getState, createPage, setActivePage, getChildPages, getPagePath, toggleLeftPanel };
+export { initState, getState, createPage, setActivePage, getChildPages, getPagePath, toggleLeftPane };
