@@ -3,8 +3,8 @@
 // =========================
 
 import { createPage, setActivePage } from "../../app/state.js";
-import { saveStateToStorage } from "../../services/storage.js";
 import { renderApp } from "../../app/render.js";
+import { saveStateToStorage } from "../../services/storage.js";
 
 // =========================
 // Application logic

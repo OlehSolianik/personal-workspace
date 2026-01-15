@@ -3,22 +3,20 @@
 }
 
 .layout-splitter {
-  position: fixed;
-  top: 4vh; 
-  left: var(--sidebar-width);
-  width: 4px;
-  height: 96vh;
-  cursor: col-resize;
   background: transparent;
+  cursor: col-resize;
+  height: 96vh;
+  inset: 4vh auto auto var(--sidebar-width);
+  position: fixed;
+  width: 4px;
   z-index: 1000;
 }
 
 .layout-splitter::after {
-  content: '';
-  position: absolute;
-  left: 1px;
-  top: 0;
-  width: 2px;
-  height: 100%;
   background: rgba(0,0,0,0.15);
+  content: '';
+  height: 100%;
+  inset: 0 auto auto 1px; 
+  position: absolute;
+  width: 2px;
 }
