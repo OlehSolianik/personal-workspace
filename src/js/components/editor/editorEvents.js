@@ -4,6 +4,7 @@
 
 import { setActivePage } from "../../app/state.js";
 import { renderApp } from "../../app/render.js";
+import { saveStateToStorage } from "../../services/storage.js";
 
 // =========================
 // Application logic
@@ -21,6 +22,7 @@ function bindBreadcrumbEvents() {
     const pageId = e.target.dataset.pageId; 
     setActivePage(pageId);
     renderApp();
+    saveStateToStorage();
   }
  });
 }
