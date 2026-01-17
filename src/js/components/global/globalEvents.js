@@ -3,6 +3,7 @@
 // =========================
 
 import { bindSidebarToggle } from "./sidebarToggle/sidebarToggle.js";
+import { bindLayoutSplitter } from "./layoutSplitter/layoutSplitter.js";
 
 // =========================
 // Application logic
@@ -10,6 +11,7 @@ import { bindSidebarToggle } from "./sidebarToggle/sidebarToggle.js";
 
 function bindGlobalEvents() {
   bindSidebarToggle();
+  bindLayoutSplitter();
 }
 
 

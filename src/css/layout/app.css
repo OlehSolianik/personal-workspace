@@ -16,12 +16,16 @@ Application static layout
   display: flex;
   flex-direction: row;
   height: 96vh;
+  width: 100vw;
 }
 
 .app__sidebar {
   flex: 0 0 var(--sidebar-width);
+  min-width: 0;
+  max-width: 75vw;
 }
 
 .app__editor {
-  flex: 1 0 80vw;
+  flex: 1 1 auto;
+  min-width: 0;
 }

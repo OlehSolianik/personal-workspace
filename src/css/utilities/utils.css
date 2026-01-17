@@ -1,3 +1,7 @@
 .is-collapsed {
   display: none;
 }
+
+.non-selectable {
+  user-select: none;
+}

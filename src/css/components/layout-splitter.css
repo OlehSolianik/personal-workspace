@@ -8,7 +8,7 @@
   height: 96vh;
   inset: 4vh auto auto var(--sidebar-width);
   position: fixed;
-  width: 4px;
+  width: 10px;
   z-index: 1000;
 }
 

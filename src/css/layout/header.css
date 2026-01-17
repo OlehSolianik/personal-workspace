@@ -11,13 +11,16 @@ Application header area
 
 .header__controls {
   align-content: center;
-  border-right: 1px solid black;
+  background-color: blanchedalmond;
   display: flex;
   flex: 0 0 var(--header-width);
   flex-direction: row;
   padding-left: 16px;
+  min-width: 0;
+  max-width: 75vw;
 }
 
 .header__tabs {
-  flex: 1 0 80vw;
+  flex: 1 1 auto;
+  min-width: 0;
 }

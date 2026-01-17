@@ -13,9 +13,11 @@ import { saveStateToStorage } from "../../../services/storage.js";
 function renderSidebarToggle() {
   const appSidebar = document.querySelector('.app__sidebar'); 
   const headerControls = document.querySelector('.header__controls');
+  const layoutSplitter = document.querySelector('.layout-splitter');
 
   appSidebar.classList.toggle('is-collapsed', getState().leftPaneIsCollapsed);
   headerControls.classList.toggle('is-collapsed', getState().leftPaneIsCollapsed);
+  layoutSplitter.classList.toggle('is-collapsed', getState().leftPaneIsCollapsed);
 }
 
 function bindSidebarToggle() {

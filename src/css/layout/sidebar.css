@@ -3,7 +3,7 @@ Application sidebar panel
 ================================================== */
 
 .app__sidebar {
-  border-right: 1px solid black;
+  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
 }
