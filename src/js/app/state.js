@@ -12,6 +12,7 @@ const state = {
   pages: [], 
   activePageId: null,
   leftPaneIsCollapsed: false,
+  leftPaneWidth: window.innerWidth * 0.2,
 }
 
 function initState() {
@@ -21,6 +22,7 @@ function initState() {
   state.pages = savedState.pages || [];
   state.activePageId = savedState.activePageId || null;
   state.leftPaneIsCollapsed = savedState.leftPaneIsCollapsed || false;
+  state.leftPaneWidth = savedState.leftPaneWidth || window.innerWidth * 0.2;
 }
 
 function getState() {

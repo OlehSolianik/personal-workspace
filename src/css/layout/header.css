@@ -17,7 +17,7 @@ Application header area
   flex-direction: row;
   padding-left: 16px;
   min-width: 0;
-  max-width: 75vw;
+  max-width: 80vw;
 }
 
 .header__tabs {

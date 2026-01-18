@@ -22,7 +22,7 @@ Application static layout
 .app__sidebar {
   flex: 0 0 var(--sidebar-width);
   min-width: 0;
-  max-width: 75vw;
+  max-width: 80vw;
 }
 
 .app__editor {

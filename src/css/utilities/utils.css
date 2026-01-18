@@ -5,3 +5,7 @@
 .non-selectable {
   user-select: none;
 }
+
+.is-overflowing-max {
+  cursor: not-allowed;
+}
