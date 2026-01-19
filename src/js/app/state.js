@@ -22,7 +22,14 @@ function initState() {
   state.pages = savedState.pages || [];
   state.activePageId = savedState.activePageId || null;
   state.leftPaneIsCollapsed = savedState.leftPaneIsCollapsed || false;
-  state.leftPaneWidth = savedState.leftPaneWidth || window.innerWidth * 0.2;
+  state.leftPaneWidth = savedState.leftPaneWidth ?? window.innerWidth * 0.2;
+}
+
+function applyLeftPaneWidth() {
+  const root = document.documentElement;
+  const { leftPaneWidth } = getState();
+  root.style.setProperty('--sidebar-width', `${leftPaneWidth}px`);
+  root.style.setProperty('--header-width', `${leftPaneWidth}px`);
 }
 
 function getState() {
@@ -68,4 +75,4 @@ function toggleLeftPane() {
   getState().leftPaneIsCollapsed = !getState().leftPaneIsCollapsed;
 }
 
-export { initState, getState, createPage, setActivePage, getChildPages, getPagePath, toggleLeftPane };
+export { initState, applyLeftPaneWidth, getState, createPage, setActivePage, getChildPages, getPagePath, toggleLeftPane };

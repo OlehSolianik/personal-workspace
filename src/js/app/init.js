@@ -2,7 +2,7 @@
 // Imports
 // =========================
 
-import { initState } from './state.js';
+import { initState, applyLeftPaneWidth } from './state.js';
 import { renderApp } from './render.js';
 import { bindEvents } from './events.js';
 
@@ -13,6 +13,7 @@ import { bindEvents } from './events.js';
 export function initApp() {
   document.addEventListener('DOMContentLoaded', () => {
     initState();
+    applyLeftPaneWidth();
     renderApp();
     bindEvents();
   });

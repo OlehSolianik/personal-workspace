@@ -12,17 +12,18 @@ import { saveStateToStorage } from "../../../services/storage.js";
 let isDragging = false;
 
 const minLeftPaneWidth = 0;
-const maxLeftPaneWidth = window.innerWidth * 0.8;
 
 const layoutSplitter = document.querySelector('[data-action="split-layout"]');
+
+function getMaxLeftPaneWidth() {
+  return window.innerWidth * 0.8;
+}
 
 function clamp(min, value, max) {
   return Math.min(Math.max(value, min), max);
 }
 
 const root = document.documentElement;
-
-root.style.setProperty('--sidebar-width', `${getState().leftPaneWidth}px`);
 
 function bindLayoutSplitter() {
 
@@ -38,9 +39,9 @@ function bindLayoutSplitter() {
     if (!isDragging) return;
 
     const rawWidth = e.clientX;
-    const newWidth = clamp(minLeftPaneWidth, rawWidth, maxLeftPaneWidth);
+    const newWidth = clamp(minLeftPaneWidth, rawWidth, getMaxLeftPaneWidth());
 
-    if (newWidth === maxLeftPaneWidth) {
+    if (newWidth === getMaxLeftPaneWidth()) {
       document.body.classList.add('is-overflowing-max');
     } else {
       document.body.classList.remove('is-overflowing-max');
@@ -50,7 +51,6 @@ function bindLayoutSplitter() {
     root.style.setProperty('--header-width', `${newWidth}px`);
 
     getState().leftPaneWidth = newWidth;
-    saveStateToStorage();
   }
 
   function handleMouseUp() {
@@ -58,6 +58,7 @@ function bindLayoutSplitter() {
     document.body.classList.remove("non-selectable");
     document.removeEventListener('mousemove', handleMouseMove); 
     document.removeEventListener('mouseup', handleMouseUp);
+    saveStateToStorage();
   }
 }
 
