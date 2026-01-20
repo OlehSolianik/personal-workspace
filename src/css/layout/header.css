@@ -3,8 +3,9 @@ Application header area
 ================================================== */
 
 :root {
-  --header-width: 20vw; 
+  --left-pane-width: 20vw; 
 }
+
 .app__header {
   border-bottom: 1px solid black;
 }
@@ -13,7 +14,7 @@ Application header area
   align-content: center;
   background-color: blanchedalmond;
   display: flex;
-  flex: 0 0 var(--header-width);
+  flex: 0 0 var(--left-pane-width);
   flex-direction: row;
   padding-left: 16px;
   min-width: 0;

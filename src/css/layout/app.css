@@ -3,7 +3,7 @@ Application static layout
 ================================================== */
 
 :root {
-  --sidebar-width: 20vw;
+  --left-pane-width: 20vw;
 }
 
 .app__header {
@@ -20,7 +20,7 @@ Application static layout
 }
 
 .app__sidebar {
-  flex: 0 0 var(--sidebar-width);
+  flex: 0 0 var(--left-pane-width);
   min-width: 0;
   max-width: 80vw;
 }

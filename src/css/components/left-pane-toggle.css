@@ -1,4 +1,5 @@
 .left-pane__toggle {
+  border: 1px solid black;
   position: fixed;
   inset: 10px auto auto 10px;
 }

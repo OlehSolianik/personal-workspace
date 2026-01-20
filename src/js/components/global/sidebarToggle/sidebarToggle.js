@@ -15,9 +15,11 @@ function renderSidebarToggle() {
   const headerControls = document.querySelector('.header__controls');
   const layoutSplitter = document.querySelector('.layout-splitter');
 
-  appSidebar.classList.toggle('is-collapsed', getState().leftPaneIsCollapsed);
-  headerControls.classList.toggle('is-collapsed', getState().leftPaneIsCollapsed);
-  layoutSplitter.classList.toggle('is-collapsed', getState().leftPaneIsCollapsed);
+  appSidebar.classList.toggle('elem-is-collapsed', getState().leftPaneIsCollapsed);
+  headerControls.classList.toggle('elem-is-collapsed', getState().leftPaneIsCollapsed);
+  layoutSplitter.classList.toggle('elem-is-collapsed', getState().leftPaneIsCollapsed);
+  
+  document.body.classList.remove('left-pane-collapsed');
 }
 
 function bindSidebarToggle() {

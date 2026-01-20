@@ -13,6 +13,7 @@ const state = {
   activePageId: null,
   leftPaneIsCollapsed: false,
   leftPaneWidth: window.innerWidth * 0.2,
+  lastExpandedLeftPaneWidth: window.innerWidth * 0.2,
 }
 
 function initState() {
@@ -28,8 +29,7 @@ function initState() {
 function applyLeftPaneWidth() {
   const root = document.documentElement;
   const { leftPaneWidth } = getState();
-  root.style.setProperty('--sidebar-width', `${leftPaneWidth}px`);
-  root.style.setProperty('--header-width', `${leftPaneWidth}px`);
+  root.style.setProperty('--left-pane-width', `${leftPaneWidth}px`);
 }
 
 function getState() {

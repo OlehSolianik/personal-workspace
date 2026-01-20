@@ -1,12 +1,12 @@
 :root {
-  --sidebar-width: 20vw;
+  --left-pane-width: 20vw;
 }
 
 .layout-splitter {
   background: transparent;
   cursor: col-resize;
   height: 96vh;
-  inset: 4vh auto auto var(--sidebar-width);
+  inset: 4vh auto auto var(--left-pane-width);
   position: fixed;
   width: 10px;
   z-index: 1000;

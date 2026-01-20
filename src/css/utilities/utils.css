@@ -1,11 +1,24 @@
-.is-collapsed {
+/* ==================================================
+Utility classes used across the application components
+================================================== */
+
+.elem-is-collapsed {
   display: none;
 }
 
-.non-selectable {
+.non-selectable-content {
   user-select: none;
 }
 
-.is-overflowing-max {
+.overflowing-max-value {
   cursor: not-allowed;
+}
+
+.is-collapse-intent {
+  cursor: grabbing;
+}
+
+body.left-pane-collapsed .app__sidebar {
+  overflow: hidden;
+  pointer-events: none;
 }
